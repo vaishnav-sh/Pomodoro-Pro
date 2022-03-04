@@ -159,7 +159,6 @@ const dev = document.querySelector('.dev')
 modeSwitch.addEventListener('click', () => {
     modeSwitch.classList.toggle('rotate');
     clock.classList.toggle('other-mode');
-    dev.classList.toggle('other-mode');
     clearInterval(interval);    // stops the timer
     currentMode++;  // changes the mode
     currentMode %= 2; // there are only two modes, so if in case currentMode > 1. currentMode will go back to 0

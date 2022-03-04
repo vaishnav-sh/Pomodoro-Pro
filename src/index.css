@@ -138,29 +138,6 @@ a {
 
 /* other */
 
-.footer {
-  position: fixed;
-  bottom: 5px;
-  opacity: 0.8;
-}
-
-.credit {
-  color: var(--light-grey);
-  font-size: 0.875rem;
-}
-
-.dev {
-  transition: all 250ms ease;
-}
-
-.dev:hover {
-  color: var(--turquoise);
-}
-
-.dev:hover.other-mode {
-  color: var(--neon-green);
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
