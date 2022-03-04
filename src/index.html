@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <div class="pomo-container">
+      <div class="pomo-clock">
+        <h1 class="time">
+          <span id="min-time"></span>:<span id="sec-time"></span>
+        </h1>
+      </div>
+
+      <div class="pomo-sessions">
+        <!-- <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div> -->
+      </div>
+
+      <div class="timer-btns">
+        <button id="play" class="btn">
+          <img src="../icons/play.svg" alt="play button" />
+        </button>
+        <button id="pause" class="btn">
+          <img src="../icons/pause.svg" alt="play button" />
+        </button>
+        <button id="reset" class="btn">
+          <img src="../icons/replay.svg" alt="play button" />
+        </button>
+      </div>
+
+      <div class="other-btns">
+        <button id="change-btn" class="btn">
+          <span class="timer-name">POMODORO</span>
+        </button>
+
+        <button id="rules" class="btn">RULES</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <h2 class="modal-title">RULES</h2>
+        <ul class="rules">
+          <li>Focus on a single task until the timer rings.</li>
+          <li>Each session takes 25/50 minutes to complete.</li>
+          <li>Take a 5/10 minute break after a session.</li>
+          <li>Long break of 15/30 minutes after 4 sessions.</li>
+        </ul>
+        <button id="close-btn">
+          <img src="../icons/close.svg" alt="close button" />
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="credit">
+        Developed by
+        <a class="dev" href="https://twitter.com/Vaishnav_sh" target="_blank"
+          >Vaishnav</a
+        >
+      </p>
+    </footer>
+
+    <button id="mode-switch">
+      <img src="../icons/gear.svg" alt="gear icon" />
+    </button>
+
+    <script src="./render.js"></script>
+  </body>
+</html>

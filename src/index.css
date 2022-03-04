@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #202124;
+  --secondary-bg: #303135;
+  --white: #ffffff;
+
+  --turquoise: #42ffe8;
+  --neon-green: #f3b531;
+  --sky-blue: #8ab4f8;
+  --light-grey: #c5c5c5;
+  --dark-grey: #575757;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  color: var(--white);
+  background-color: var(--primary-bg);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+.pomo-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pomo-clock {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: var(--secondary-bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  position: relative;
+}
+
+.pomo-clock::before {
+  content: "";
+  position: absolute;
+  width: 315px;
+  height: 315px;
+  border-radius: 50%;
+  background-color: var(--turquoise);
+  z-index: -1;
+}
+
+/* style for when other mode is activated */
+.other-mode::before {
+  background-color: var(--neon-green);
+}
+
+/* styling the session indicator */
+.pomo-sessions {
+  /* margin: 2.5em 0; */
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.session {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary-bg);
+  border: 0.5px solid var(--dark-grey);
+}
+
+.session-active {
+  background-color: var(--white);
+}
+
+/* btns */
+
+.timer-btns,
+.other-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.btn {
+  background-color: transparent;
+  color: var(--white);
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+  outline: 2px solid white;
+  border: none;
+  display: grid;
+  place-items: center;
+  padding: 0.5em 1em;
+  width: 30%;
+  border-radius: 100px;
+
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-bg);
+}
+
+/* Timers */
+
+#change-btn {
+  width: 40%;
+}
+
+.timer-name {
+  text-transform: uppercase;
+  padding-right: 0.5em;
+  position: relative;
+}
+
+.timer-name::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -1px;
+  background: url("../icons/arrow-down.svg") no-repeat;
+}
+
+/* other */
+
+.footer {
+  position: fixed;
+  bottom: 5px;
+  opacity: 0.8;
+}
+
+.credit {
+  color: var(--light-grey);
+  font-size: 0.875rem;
+}
+
+.dev {
+  transition: all 250ms ease;
+}
+
+.dev:hover {
+  color: var(--turquoise);
+}
+
+.dev:hover.other-mode {
+  color: var(--neon-green);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+
+.show-modal {
+  visibility: visible;
+  z-index: 1;
+}
+
+.modal-container {
+  width: min(600px, 90%);
+  background-color: var(--secondary-bg);
+  padding: 2em 4em;
+  border-radius: 20px;
+
+  position: relative;
+}
+
+#close-btn {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: transparent;
+  border: none;
+}
+
+.modal-title {
+  color: var(--sky-blue);
+  text-align: center;
+  margin-top: 0;
+}
+
+.rules {
+  padding: 0;
+  margin: 3em 0;
+}
+
+.rules li {
+  margin-top: 2em;
+}
+
+#mode-switch {
+  border: none;
+  background: transparent;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  transition: all 300ms ease-out;
+}
+
+#mode-switch.rotate {
+  transform: rotate(200deg);
+}
+
+@media (max-width: 700px) {
+  .pomo-clock {
+    height: 200px;
+    width: 200px;
+  }
+
+  .pomo-clock::before {
+    height: 215px;
+    width: 215px;
+  }
+
+  .rules {
+    margin: 1.5em 0;
+  }
+
+  .time {
+    font-size: 1rem;
+  }
+}
