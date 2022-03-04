@@ -19,7 +19,7 @@ $ npm run make
 
 - Install the app by running `Pomodoro Pro Setup.exe` which is located `Pomodoro-Pro\out\make\squirrel.xxx\xxxx`
 
-**YAY! Now you have a successfully installed Pomodoro Pro and there will be a shortcut icon waiting for you in the desktop**
+**Great! Now you have successfully installed Pomodoro Pro. There will be a shortcut icon waiting for you in the desktop**
 
 ## Contributing
 All contributions to this project are welcomed! To get started with development, follow the first two steps mentioned in the download section and you'll be good to go!
