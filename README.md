@@ -3,7 +3,11 @@
 A simple, cross platform desktop app that allows you to be more productive and get organized. Built using Electron Forge and JavaScript.
 
 <p align="center">
-<img src="./readme pomodoro pro screenshot.png" alt="pomodoro screenshot" width="700" align="center">
+<img src="./readme screenshot.png" alt="pomodoro screenshot" width="700" align="center">
+</p>
+<br>
+<p align="center">
+<img src="./readme screenshot 2.png" alt="pomodoro screenshot" width="700" align="center">
 </p>
 
 ## Download
