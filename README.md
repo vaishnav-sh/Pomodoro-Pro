@@ -15,13 +15,13 @@ A simple, cross platform desktop app that allows you to be more productive and g
 - Clone the repo:
 
 ```bash
-$ git clone https://github.com/cassidoo/todometer.git
+$ git clone https://github.com/vaishnav-sh/Pomodoro-Pro.git
 ```
 
 - Go to the project directory and install dependencies:
 
 ```bash
-$ cd todometer npm install
+$ cd Pomodoro-Pro npm install
 ```
 
 - Create the executable package based on your machine
